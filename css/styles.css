@@ -1,0 +1,139 @@
+/* styles.css - CSS duy nhất cho cả 3 trang */
+
+/* Reset nhẹ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1) body: font-family và kích thước cơ bản */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;       /* base font size */
+  line-height: 1.6;      /* dễ đọc */
+  color: #222222;        /* chữ tối dễ đọc */
+  background-color: #f7f9fb; /* nền sáng nhẹ */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2) header: màu nền */
+header {
+  background-color: #0b6efd; /* xanh tối, tương phản cao với chữ trắng */
+  padding: 1.25rem;
+  color: #ffffff;
+}
+
+/* h1: căn chỉnh, font và màu sắc (đã yêu cầu riêng) */
+header h1 {
+  text-align: center;
+  font-size: 1.75rem; /* điều chỉnh kích thước lớn cho tiêu đề */
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff; /* chữ trắng trên nền xanh */
+  letter-spacing: 0.5px;
+}
+
+/* 3) nav: màu nền và kiểu danh sách */
+nav {
+  background-color: #083a8a; /* đậm hơn header để phân vùng rõ ràng */
+  padding: 0.5rem 1rem;
+}
+
+/* li: hiển thị và chiều rộng cho mục trong nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.25rem 0;
+}
+
+nav li {
+  display: inline-block; /* theo yêu cầu: thay đổi display */
+  width: auto; /* không ép cứng chiều rộng; nếu muốn, đặt ví dụ 120px */
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* hover button style */
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255,255,255,0.12);
+  outline: 2px solid rgba(255,255,255,0.18);
+}
+
+/* 4) main: background và kích thước font */
+main {
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(16,24,40,0.06);
+  font-size: 1rem; /* cơ bản, có thể override trong article */
+}
+
+/* bài viết bên trong main */
+main article h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0b3a8a;
+}
+
+/* p: sửa line-height theo yêu cầu */
+main p {
+  line-height: 1.8; /* thay đổi chiều cao dòng để dễ đọc */
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+/* ul/ li trong nội dung */
+main ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+/* 5) footer: màu nền */
+footer {
+  background-color: #0b2447;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+/* responsive: điều chỉnh cho nhỏ màn hình */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+  nav ul {
+    gap: 0.25rem;
+  }
+  main {
+    margin: 0.75rem;
+    padding: 1rem;
+  }
+}
+
+/* utilities (tuỳ chọn) */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
